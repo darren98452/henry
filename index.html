@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vocab AI Trainer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              title: ['Lora', 'serif'],
+            },
+            colors: {
+              'primary': '#a78bfa', // Lavender
+              'primary-focus': '#8b5cf6', // Darker Lavender
+              'secondary': '#2dd4bf', // Teal
+              'accent': '#f472b6', // Pink
+              'neutral': '#111827',
+              'base-100': '#f6f4fc', // Off-white lavender
+              'base-200': '#ede9fe', // Light lavender
+              'base-300': '#e5e7eb',
+              'info': '#3b82f6',
+              'success': '#22c55e',
+              'warning': '#f59e0b',
+              'error': '#ef4444',
+            },
+             animation: {
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'slide-in-up': 'slideInUp 0.5s ease-out forwards',
+              'pop-in': 'popIn 0.3s ease-out forwards',
+            },
+            keyframes: {
+              fadeIn: { '0%': { opacity: 0 }, '100%': { opacity: 1 } },
+              slideInUp: { '0%': { transform: 'translateY(20px)', opacity: 0 }, '100%': { transform: 'translateY(0)', opacity: 1 } },
+              popIn: { '0%': { transform: 'scale(0.9)', opacity: 0 }, '100%': { transform: 'scale(1)', opacity: 1 } },
+            },
+          }
+        }
+      }
+    </script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.20.0",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "recharts": "https://aistudiocdn.com/recharts@^3.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.544.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^11.5.0"
+  }
+}
+</script>
+</head>
+  <body class="bg-base-200">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
